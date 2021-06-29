@@ -41,6 +41,11 @@ public class spaceShipMovement : MonoBehaviour
             SpaceShip.transform.localRotation = Quaternion.Lerp(SpaceShip.transform.localRotation, Quaternion.Euler(SpaceShip.transform.localRotation.x,SpaceShip.transform.localRotation.y, 45), Time.deltaTime);
             
         }
+        else if(DeltRot == 0)
+        {
+            SpaceShip.transform.localRotation = Quaternion.Lerp(SpaceShip.transform.localRotation, Quaternion.Euler(SpaceShip.transform.localRotation.x,SpaceShip.transform.localRotation.y, 0), Time.deltaTime);
+            
+        }
 
     }
 }
