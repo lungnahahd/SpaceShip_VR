@@ -386,6 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Head: {fileID: 978281991}
   Cam: {fileID: 963194225}
+  SpaceShip: {fileID: 1970565615}
 --- !u!4 &978281993
 Transform:
   m_ObjectHideFlags: 0
@@ -458,6 +459,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81a45116981bb514c866bab4841bb1fe, type: 3}
+--- !u!1 &1970565615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 192754, guid: 81a45116981bb514c866bab4841bb1fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 983700731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1992192140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 452004, guid: 81a45116981bb514c866bab4841bb1fe,

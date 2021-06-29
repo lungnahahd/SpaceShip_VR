@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class spaceShipMovement : MonoBehaviour
 {
-    public GameObject Head; // 우주선을 가르키는 변수
+    public GameObject Head; // 우주선과 카메라를 포괄하는 객체를 가르키는 변수
     public GameObject Cam; // 카메라를 가르키는 변수
+    public GameObject SpaceShip; // 우주선을 가르키는 변수
 
     float CurrRot; // 현재 회전 값
     float PrevRot; // 이전 회전 값
@@ -26,8 +27,20 @@ public class spaceShipMovement : MonoBehaviour
 
     void moverl()
     {
-        CurrRot = Cam.tranform.eulerAngles.y;
+        CurrRot = Cam.transform.eulerAngles.y;
         DeltRot = CurrRot - PrevRot;
         PrevRot = CurrRot;
+
+        if(DeltRot > 0)
+        {
+            SpaceShip.transform.localRotation = Quaternion.Lerp(SpaceShip.transform.localRotation, Quaternion.Euler(SpaceShip.transform.localRotation.x,SpaceShip.transform.localRotation.y, -45), Time.deltaTime);
+
+        }
+        else if(DeltRot < 0)
+        {
+            SpaceShip.transform.localRotation = Quaternion.Lerp(SpaceShip.transform.localRotation, Quaternion.Euler(SpaceShip.transform.localRotation.x,SpaceShip.transform.localRotation.y, 45), Time.deltaTime);
+            
+        }
+
     }
 }
