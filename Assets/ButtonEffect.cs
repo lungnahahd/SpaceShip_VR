@@ -8,4 +8,8 @@ public class ButtonEffect : MonoBehaviour
     public void StartGame(){
         SceneManager.LoadScene("InGame");
     }
+
+    public void Select(){
+        SceneManager.LoadScene("Select");
+    }
 }
